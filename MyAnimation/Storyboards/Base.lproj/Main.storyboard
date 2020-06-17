@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="DTe-vP-PDg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="0VQ-Ek-42b" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="121" y="100" width="133" height="133.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0VQ-Ek-42b" secondAttribute="height" multiplier="1:1" id="ury-FA-deb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Ak-RS-qva">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-b7-3WS">
+                                        <rect key="frame" x="0.0" y="0.0" width="34.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="repeat" catalog="system"/>
+                                        <connections>
+                                            <action selector="repeatButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRH-qj-g9I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8s-Of-8bc" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="42.5" y="0.0" width="160" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Mkl-K7-UXG"/>
+                                        </constraints>
+                                        <state key="normal" title="Next Animation">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="runButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbR-Q5-LLs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw3-hK-v21" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="210.5" y="0.0" width="124.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ofk-2o-Q77"/>
+                                        </constraints>
+                                        <state key="normal" title="Show code">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="codeButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KZh-Gg-ooq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Code" translatesAutoresizingMaskIntoConstraints="NO" id="OmQ-0X-zlR">
+                                <rect key="frame" x="20" y="333.5" width="335" height="275.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0VQ-Ek-42b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1UH-JV-rzM"/>
+                            <constraint firstItem="OmQ-0X-zlR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6S9-k0-LfN"/>
+                            <constraint firstItem="DTe-vP-PDg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A6o-f4-FBL"/>
+                            <constraint firstItem="OmQ-0X-zlR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DIF-pt-KsB"/>
+                            <constraint firstItem="0VQ-Ek-42b" firstAttribute="height" secondItem="DTe-vP-PDg" secondAttribute="height" multiplier="0.2" id="ED5-He-EDI"/>
+                            <constraint firstAttribute="bottom" secondItem="DTe-vP-PDg" secondAttribute="bottom" id="PEs-kF-wT9"/>
+                            <constraint firstItem="0VQ-Ek-42b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Q94-YC-Afq"/>
+                            <constraint firstItem="9Ak-RS-qva" firstAttribute="top" secondItem="OmQ-0X-zlR" secondAttribute="bottom" constant="8" id="R8D-s2-G5G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ak-RS-qva" secondAttribute="bottom" constant="20" id="XbN-pk-5g0"/>
+                            <constraint firstItem="DTe-vP-PDg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XgW-S9-8b0"/>
+                            <constraint firstAttribute="trailing" secondItem="DTe-vP-PDg" secondAttribute="trailing" id="f4q-04-prD"/>
+                            <constraint firstItem="9Ak-RS-qva" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hVg-Ox-KCh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ak-RS-qva" secondAttribute="trailing" constant="20" id="t7w-uP-2sq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OmQ-0X-zlR" secondAttribute="trailing" constant="20" id="zoR-aa-I3S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationImageView" destination="0VQ-Ek-42b" id="MPc-w1-13f"/>
+                        <outlet property="codeButton" destination="Jw3-hK-v21" id="zP0-Js-mtW"/>
+                        <outlet property="codeTextView" destination="OmQ-0X-zlR" id="1Zo-6w-nzB"/>
+                        <outlet property="repeatButton" destination="Ctt-b7-3WS" id="drU-pW-bZD"/>
+                        <outlet property="runAnimationButton" destination="z8s-Of-8bc" id="lsR-LT-ls0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1332.0422535211267" y="-294.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background3" width="4480" height="6720"/>
+        <image name="circle" width="2301" height="2285"/>
+        <image name="repeat" catalog="system" width="128" height="99"/>
+    </resources>
+</document>
