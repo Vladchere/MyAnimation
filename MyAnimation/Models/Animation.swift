@@ -17,7 +17,6 @@ struct Animation {
     let rotate: Float
     
     static func getAnimations() -> [Animation] {
-        
         var animations: [Animation] = []
         
         let animationPresets = DataManager.shared.animationPresets.shuffled()
